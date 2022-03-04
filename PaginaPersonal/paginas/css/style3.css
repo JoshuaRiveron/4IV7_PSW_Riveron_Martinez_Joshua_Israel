@@ -1,0 +1,46 @@
+*{
+    margin: 0;
+    padding: 10px;
+    text-align: center;
+}
+
+body{
+    background-image: url(../images/dibujo.jpeg);
+    background-size: cover;
+    color:rgb(0,0,0);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+@keyframes label-animacion{
+    from{
+        transform: rotate(180deg);
+        margin-left: 0;
+    }
+    to{
+        transform: rotate(0deg);
+        margin-left: 70vw;
+    }
+}
+
+.label-container{
+    width: 100%;
+    padding: 1.4rem;
+    box-sizing: border-box;
+}
+
+.label{
+    width: 300px;
+    background-color: goldenrod;
+    color: white;
+    font-size: 1.3rem;
+    padding: 1rem;
+    border-radius: 20px;
+    animation-name: label-animacion;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}

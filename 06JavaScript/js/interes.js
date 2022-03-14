@@ -1,7 +1,7 @@
-/*
-vamos a realixar una funcion que se encargue de validar la entrada
+/*  
+vamos a realizar una funcion que se encargue de validar la entrada
 de numeros por medio de una expresion regular
-*/
+*/ 
 
 function validarn(e){
     var teclado = (document.all)? e.keyCode : e.which;
@@ -12,15 +12,17 @@ function validarn(e){
 }
 
 function interes(){
+
     var valor = document.formulario.cantidad.value;
     var resul = parseInt(valor);
     var interes = resul*0.037;
     var total = interes + resul;
-    
+
     document.formulario.sueldoI.value= "$" + total;
 }
 
 function borrard(){
-    document.formulario.cantidad.value=""
-    document.formulario.sueldoI.value=""
+
+    document.formulario.cantidad.value="";
+    document.formulario.sueldoI.value="";
 }

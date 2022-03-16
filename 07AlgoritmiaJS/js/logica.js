@@ -42,7 +42,6 @@ function problema3(){
                     }
                 }
             });
-
         });
         p3_res += 'Palabra: ' + palabra + ' = ' + letras_unicas.length + '\n';
     });

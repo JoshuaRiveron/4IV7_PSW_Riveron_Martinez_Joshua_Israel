@@ -5,17 +5,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ejercicios de JS</title>
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../06JavaScript/css/style.css">
 </head>
 <body>
+    <div class="tprin">
+    <h1>Ejercicios de JavaScript</h1>
+    </div>
+    <br>
+
+    <!--Ejercicio 1-->
+
+    <div class="ejercicios">
+        <h1>Ejercicio 1</h1>
+    </div>
+    <br>
     <form name="formulario" method="post" action="">
 
         <label> Formulario para el calculo de inversión de capital
             al 3.7% anual </label>
-        <br>
+        <br><br>
         <table>
             <tr>
-                <td>Introduce la cantidad que deseas invertir</td>
+                <td>Introduce la cantidad que deseas invertir: </td>
                 <td><input type="text" name="cantidad"
                     onkeypress="return validarn(event)"  ></td>
             </tr>
@@ -25,7 +36,8 @@
                     name="enviar" onclick="interes()" ></td>
             </tr>
             <tr>
-                <td>Su saldo total con el interes al 3.7% anual es de:</td>
+                
+                <td>Su saldo total con el interes al 3.7% anual es de: </td>
                 <td><input type="text" name="sueldoI" id="cantidadI" 
                     readonly="readonly" class="input_text"></td>
             </tr>
@@ -39,6 +51,68 @@
 
     </form>
     <script src="js/interes.js" ></script>
+    <br>
+
+    <!--Ejercicio 2-->
+    <div class="ejercicios">
+        <h1>Ejercicio 2</h1>
+    </div>
+    <br>
     
+    <!--Ejercicio 3-->
+    <div class="ejercicios">
+        <h1>Ejercicio 3</h1>
+    </div>
+    <br>
+    <form name="formulario3" method="post3" action="">
+        <label> Formulario para el calculo de inversión de capital
+            al 3.7% anual </label>
+        <br><br>
+        <table>
+            <tr>
+                <td>Introduce el total de tu compra: </td>
+                <td><input type="text" name="cantidad"
+                    onkeypress="return value(event)"  ></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Calcular Interes"
+                    name="enviar" onclick="intere()" ></td>
+            </tr>
+            <tr>
+                
+                <td>Con el descuento aplicado tu total es de: </td>
+                <td><input type="text" name="sueldoI" id="cantidadI" 
+                    readonly="readonly" class="input_text"></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><input type="button" value="Borrar Datos"
+                    name="borrar" onclick="borrar3()" ></td>
+            </tr>
+
+        </table>
+    </form>
+    <script src="js/ejercicio3.js" ></script>
+    <br>
+
+    <!--Ejercicio 4-->
+    <div class="ejercicios">
+        <h1>Ejercicio 4</h1>
+    </div>
+    <br>
+    
+    <!--Ejercicio 5-->
+    <div class="ejercicios">
+        <h1>Ejercicio 5</h1>
+    </div>
+    <br>
+    
+    <!--Ejercicio 6-->
+    <div class="ejercicios">
+        <h1>Ejercicio 6</h1>
+    </div>
+    <br>
+
 </body>
 </html>

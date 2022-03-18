@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url(../images/fondo2.webp);
+    background-size: cover;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.encabezado{
+    background-image: url(../images/fondo.jpg);
+    text-align: center;
+}
+
+.contenido{
+    background-color: rgb(245, 241, 219);
+    display: flex;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+}
+
+.left_side{
+    background-color: rgb(231, 212, 149);
+    height: 1000px;
+    width: 400px;
+    padding: 0%;
+}
+.rigth_side{
+    background-color: rgb(231, 205, 117);
+    height: 1000px;
+    width: 400px;
+    padding: 0%;
+}
+
+.imagen{
+    background-color: rgb(245, 241, 219);
+    max-width: 1000px;
+    min-height: 400px;
+}

@@ -26,19 +26,19 @@ body{
 
 .left_side{
     background-color: rgb(231, 212, 149);
-    height: 1000px;
+    height: 1250px;
     width: 400px;
     padding: 0%;
 }
 .rigth_side{
     background-color: rgb(231, 205, 117);
-    height: 1000px;
+    height: 1250px;
     width: 400px;
     padding: 0%;
 }
 
 .imagen{
     background-color: rgb(245, 241, 219);
-    max-width: 1000px;
+    max-width: 1250px;
     min-height: 400px;
 }

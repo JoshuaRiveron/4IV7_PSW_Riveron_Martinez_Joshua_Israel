@@ -54,7 +54,6 @@ tr:hover td{
 .footer{
     background-color: #a83246;
     padding: 1em 0;
-    position: absolute;
     bottom: 0;
     width: 100%;
 }
@@ -90,4 +89,8 @@ tr:hover td{
     letter-spacing: 4px;
     font-size: 20px;
     transition: 0.2s;
+}
+
+.regresar{
+    text-align: center;
 }

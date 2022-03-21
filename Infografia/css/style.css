@@ -42,3 +42,7 @@ body{
     max-width: 1250px;
     min-height: 400px;
 }
+
+.regresar{
+    text-align: center;
+}

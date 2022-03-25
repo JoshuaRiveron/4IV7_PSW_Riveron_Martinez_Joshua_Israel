@@ -3,6 +3,10 @@
     margin: 0 auto;
 }
 
+body{
+    background-color: blanchedalmond;
+}
+
 #fondo{
     opacity: 0.3;
 }

@@ -5,35 +5,34 @@
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.*;
-import javax.servlet.ServletConfig;
+
 /**
  *
  * @author Compaq
  */
-
-public class ConsultarAlumnos extends HttpServlet {
-    /*
-    Para que se pueda conectar con la BD es necesario un constructor
-    Se necesitan 3 tipos de objetos para póder establecer la conexión
-    
-    Connection que establece la conexion con el servidor BD
-    Statement que sirve para poner definir las sentencias de
-    manipulacion y definicion de datos (create, update, 
-    insert, delete)
-    ResultSet que sirve para poder crear querrys
-    */
+public class ModificarAlumno extends HttpServlet {
     
     private Connection con;
     private Statement set;
     private ResultSet rs;
-    
-    //defino el constructor de la clase
-    
+    /**
+     * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
+     * methods.
+     *
+     * @param request servlet request
+     * @param response servlet response
+     * @throws ServletException if a servlet-specific error occurs
+     * @throws IOException if an I/O error occurs
+     */
     public void init(ServletConfig cfg) throws ServletException{
         //aqui es donde se define como se conecta a la BD
         String URL = "jdbc:mysql:3306//localhost/alumnos";
@@ -80,53 +79,24 @@ public class ConsultarAlumnos extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Lista de Alumnos de Batiz</title>");            
+            out.println("<title>Modificar Datos del Alumno</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Tabla de la Lista de Alumnos</h1>"
-                    + "<table border=2>"
-                        + "<tr>"
-                            + "<th>Boleta</th>"
-                            + "<th>Nombre del Alumno</th>"
-                            + "<th>Telefono</th>"
-                        + "</tr>");
+            
             try{
-                int boleta;
-                String nombre, apellidopaterno, apellidomaterno, tel;
                 
-                //Establecer la querry
-                String q = "select * from alumnobatiz";
-                
-                set = con.createStatement();
-                rs = set.executeQuery(q);
-                
-                while(rs.next()){
-                    boleta = rs.getInt("boleta");
-                    nombre = rs.getString("nombre");
-                    apellidopaterno = rs.getString("appat");
-                    apellidomaterno = rs.getString("apmat");
-                    tel = rs.getString("telefono");
-                    out.println("<tr>"
-                                + "<td>"+boleta+"</td>"
-                                + "<td>"+nombre+" "+apellidopaterno+" "
-                                +apellidomaterno+"</td>"
-                                + "<td>"+tel+"</td>"
-                            + "</tr>");
-                }
-                
-                //hay que cerrar conexiones
-                rs.close();
-                set.close();
+                out.println("<h1>Se modificaron los datos del alumno</h1>");                                
+                System.out.println("No se pudo modificar la informacion");
                 
             }catch(Exception e){
-                System.out.println("Error al conectar a la tabla");
+                System.out.println("No se pudo modificar la informacion");
                 System.out.println(e.getMessage());
-                System.out.println(e.getStackTrace());
-                               
+                System.out.println(e.getStackTrace());                           
+                out.println("<h1>Error al modificar los datos del alumno</h1>");
             }
             
-            out.println("</table>");                       
-            out.println("<a href='index.html' >Pagina Principal</a>");
+            out.println("<h1>Error al modificar los datos del alumno</h1>");
+            out.println("<a href='ConsultarAlumnos' >Consultar Alumnos</a>");
             out.println("</body>");
             out.println("</html>");
         }
@@ -143,7 +113,7 @@ public class ConsultarAlumnos extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        processRequest(request, response);
     }
 
     /**
@@ -164,5 +134,5 @@ public class ConsultarAlumnos extends HttpServlet {
             super.destroy();
         }
     }
-        
+
 }

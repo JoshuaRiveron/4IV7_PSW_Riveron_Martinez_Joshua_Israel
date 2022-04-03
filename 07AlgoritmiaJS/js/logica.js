@@ -1,4 +1,36 @@
 
+//problema 1
+
+function texto(){
+
+    var palabras = document.getElementById('p1-input').value.split(" ");
+
+    var listafinal = [];
+    for (var i = palabras.length-1; i >=0; i--) {
+        listafinal.push(palabras[i])
+    };
+
+    var textofinal = '';
+    listafinal.forEach(function(elemento){
+        textofinal += elemento+" ";
+    })
+
+    document.getElementById('p1-output').innerHTML = textofinal;
+}
+
+//problema 2
+
+function producto() {
+    var v1 = document.querySelectorAll("input.p2x")
+    var v2 = document.querySelectorAll("input.p2y")
+
+    var productoescalar = []
+
+    for (let i = 0; i < v1.length; i++) {
+        productoescalar.push(v1[i].value*v2[i].value)
+    }
+    document.getElementById('p2-output').textContent = productoescalar
+}
 
 //problema 3
 

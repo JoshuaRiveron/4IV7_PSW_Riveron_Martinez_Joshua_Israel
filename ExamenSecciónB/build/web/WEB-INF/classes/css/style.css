@@ -1,0 +1,26 @@
+*{
+    margin: 10;
+    padding: 5px;
+}
+
+body{
+    background-image: url(../images/fondo1.jpg);
+}
+
+.bg-dark{
+    text-align: center;
+    background-color: rgb(172, 188, 231);
+    color: rgb(103, 82, 197);
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 50px;
+}
+
+.titulo1{
+    background-color: rgb(64, 103, 187);
+    border-radius: 50px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+

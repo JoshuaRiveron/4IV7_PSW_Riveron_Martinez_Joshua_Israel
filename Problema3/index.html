@@ -5,28 +5,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Problema 3</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    
-    <table>
-        <tr>
-            <th>1</th><th>2</th><th>3</th>
-        </tr>
-        <tr>
-            <th>4</th><th>5</th><th>6</th>
-        </tr>
-        <tr>
-            <th>7</th><th>8</th><th>9</th>
-        </tr>
-        <tr>
-            <th>7</th><th>8</th><th>9</th>
-        </tr>
-        <tr>
-            <th>*</th><th>0</th><th>#</th>
-        </tr>
-    </table>
 
+    <div class="titulo">
+    <h1>Problema 3 - Celular</h1>
+    </div>
 
+    <div class="f2">
 
+        <div class="celular" >
+            <div class="superior">
+                <img src="./images/superior.jpg" height="100px" width="420px">
+            </div>
+            <table>
+                <tr>
+                    <div class="entrada">
+                        <input type="number" name="" id="">
+                    </div>
+                </tr>
+                <tr>
+                    <th>
+                    <button class="color" id="enviar" onmousedown="sonido.play()">1</button></th>
+                    <th><button class="color" id="enviar" onmousedown="sonido.play()">2 ABC</button></th>
+                    <th><button class="color" id="enviar" onmousedown="sonido.play()">3 DEF</button></th>
+                </tr>
+                <tr>
+                    <th><button class="color" id="enviar" onmousedown="sonido.play()">4 GHI</button></th>
+                    <th><button class="color" id="enviar" onmousedown="sonido.play()">5 JKL</button></th>
+                    <th><button class="color" id="enviar" onmousedown="sonido.play()">6 MNO</button></th>
+                </tr>
+                <tr>
+                    <th><button class="color" id="enviar" onmousedown="sonido.play()">7 PQRS</button></th>
+                    <th><button class="color" id="enviar" onmousedown="sonido.play()">8 TUV</button></th>
+                    <th><button class="color" id="enviar" onmousedown="sonido.play()">9 WXYZ</button></th>
+                </tr>
+                <tr>
+                    <th><button class="color" id="enviar" onmousedown="sonido.play()">*</button></th>
+                    <th><button class="color" id="enviar" onmousedown="sonido.play()">0 +</button></th>
+                    <th><button class="color" id="enviar" onmousedown="sonido.play()">#</button></th>
+                </tr>
+            </table>
+            <div class="inferior">
+                <img src="./images/inferior.jpg" height="40px" width="420px">
+            </div>
+        </div>
+    </div>
+    <br><br><br>
+    <div class="footer">
+        <footer>
+            Profesora: Vazquez Sanchez Alma Erika
+            <br>
+            Alumno: Riverón Martínez Joshua Israel
+            <br>
+            Grupo: 5IV7
+        </footer>
+    </div>
+    <script >
+        var sonido = new Audio();
+        sonido.src="sonido.mp3";      
+    </script>      
 </body>
 </html>
